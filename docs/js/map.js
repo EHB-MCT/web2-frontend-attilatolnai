@@ -28,6 +28,21 @@ function setupMapUser(center){
     const nav = new mapboxgl.NavigationControl();
     map.addControl(nav);
     //No directions here because it wouldn't make sense to use it for very short distances
+
+    //For visitor created markers
+    const visitorMarker = new mapboxgl.Marker({
+        color: "#FBB03B"
+    })
+    .setLngLat([4.322200,50.842302])
+    .addTo(map);
+
+    //For seller created markers
+    const sellerMarker = new mapboxgl.Marker({
+        color: "#F15A24"
+    })
+    .setLngLat([4.322000,50.842302])
+    .addTo(map);
+
 }
 
 //new map being created for the default location, which has an overview of Brussels
@@ -47,9 +62,12 @@ function setupMapDefault(center){
         unit: 'metric'
     });
     map.addControl(directions, 'top-left');
-    
+
     //This adds a static marker to the map
-    const marker1 = new mapboxgl.Marker()
+    //For fleamarkets
+    const fleaMarker = new mapboxgl.Marker({
+        color: "#4D4D4D"
+    })
     .setLngLat([4.322641,50.842302])
     .addTo(map);
 }
