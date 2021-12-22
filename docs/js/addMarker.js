@@ -8,8 +8,10 @@ function postData() {
 
         let inputPinName = document.getElementById("pin_name").value;
         let inputTags = document.getElementById("tags").value;
-        let inputDescription = document.getElementById("course").value;
-        //need to figure out how to add location to it
+        let inputDescription = document.getElementById("description").value;
+        let inputLongitude = document.getElementById("longitude").value;
+        let inputLatitude = document.getElementById("latitude").value;
+        //need to figure out how to add user location to it
 
             fetch("https://web2-courseproject-attila.herokuapp.com/dataPerson", {
                 method: "POST",
@@ -19,7 +21,9 @@ function postData() {
                 body: JSON.stringify({
                     pinName: inputPinName,
                     Tags: inputTags,
-                    Description: inputDescription
+                    Description: inputDescription,
+                    Longitude: inputLongitude,
+                    Latitude: inputLatitude
                 })
             })
 
