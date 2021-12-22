@@ -6,14 +6,14 @@ navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {enable
 
 
 window.onload = function(){
-    getDataMarket()
-    //getDataPerson()
+    //getDataMarket() //WORKING
+    //getDataPerson() //WORKING
 
     //postDataMarket()
     //postDataPerson()
 }
 
-//Get data from the database
+//Get data from the database collection "fleamarkets" => DONE AND WORKING
 async function getDataMarket() {
     let data = await fetch("https://web2-courseproject-attila.herokuapp.com/dataMarket")
     let json = await data.json();
@@ -29,8 +29,23 @@ async function getDataMarket() {
         `
     })
     document.getElementById("container").innerHTML= HTMLstring;
+}
+//Get data from the database collection "persons" => DONE AND WORKING
+  async function getDataPerson() {
+    let data = await fetch("https://web2-courseproject-attila.herokuapp.com/dataPerson")
+    let json = await data.json();
+    let HTMLstring = "";
 
-
+    json.forEach(input => {
+        HTMLstring +=`
+        <p>${input._id}</p>
+        <p>${input.pin_name}</p>
+        <p>${input.tags}</p>
+        <p>${input.description}</p>
+        <p>${input.pin_location}</p>
+        `
+    })
+    document.getElementById("container").innerHTML= HTMLstring;
   }
 
 
