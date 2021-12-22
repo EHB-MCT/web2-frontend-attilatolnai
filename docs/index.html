@@ -9,8 +9,15 @@
   <body>
     <h1>Project Web II Attila Tolnai</h1>
     <script src="main.js"></script>
-    <container id="mapWindow">
 
-    </container>
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidGlsYWRlaHVuIiwiYSI6ImNrdXdhNzczaDBlN2sydW1yYTQwMzM5MHUifQ.n9w_c_FBhfcJOR-QADQcpA';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11'
+      });
+    </script>
+
   </body>
 </html>
