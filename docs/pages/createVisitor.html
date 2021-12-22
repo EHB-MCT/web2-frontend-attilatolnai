@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Css links -->
+    <link rel="stylesheet" type="text/css" href="/docs/css/style.css">
+    <!-- Page title -->
+    <title>Getting Started</title>
+    <!-- Javascript link -->
+    
+
+    <!-- <script src="js/map.js" defer></script> -->
+  </head>
+  <body>
+    <h1>Project Web II Attila Tolnai</h1>
+    <p><a href="/docs/index.html">Home</a></p>
+    <p><a href="/docs/pages/createMarker.html">Create a marker</a></p>
+    <p><a href="/docs/pages/information.html">Locations overview</a></p>
+    <script src="main.js"></script>
+    <div id="container"></div>
+
+    <h2>Please fill in the form below</h2>
+    <form id="form" method="post">
+        <h3>Add new marker as seller</h3>
+        <p>Marker name: <input id="pin_name" type="text" name="pin_name" placeholder="pin name here"></p>
+        <p>Tags: <input id="tags" type="text" name="tags" placeholder="tags here"></p>
+        <p>Description: <input id="description" type="text" name="description" placeholder="description here"></p>
+        <p>The marker will be inserted at your current location</p>
+        <button type="submit">Add marker</button>
+    </form>
+  </body>
+</html>
