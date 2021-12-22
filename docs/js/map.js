@@ -20,7 +20,7 @@ function errorLocation(){
 function setupMapUser(center){
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/tiladehun/ckxhpvz30iysa15s9u2kon835',
         center: center,
         zoom: 18
     })
@@ -34,7 +34,7 @@ function setupMapUser(center){
 function setupMapDefault(center){
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/tiladehun/ckxhpvz30iysa15s9u2kon835',
         center: center,
         zoom: 12
     })
@@ -47,4 +47,10 @@ function setupMapDefault(center){
         unit: 'metric'
     });
     map.addControl(directions, 'top-left');
+    
+    //This adds a static marker to the map
+    const marker1 = new mapboxgl.Marker()
+    .setLngLat([4.322641,50.842302])
+    .addTo(map);
 }
+
