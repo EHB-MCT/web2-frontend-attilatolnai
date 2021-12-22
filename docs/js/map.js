@@ -6,7 +6,7 @@ navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {enable
 
 
 window.onload = function(){
-    //getDataMarket() //WORKING
+    getDataMarket() //WORKING
     //getDataPerson() //WORKING
 
     //postDataMarket()
@@ -18,15 +18,21 @@ async function getDataMarket() {
     let data = await fetch("https://web2-courseproject-attila.herokuapp.com/dataMarket")
     let json = await data.json();
     let HTMLstring = "";
-
+    
+    //THIS WORKS!!
     json.forEach(input => {
-        HTMLstring +=`
-        <p>${input._id}</p>
-        <p>${input.name}</p>
-        <p>${input.location}</p>
-        <p>${input.date}</p>
-        <p>${input.time}</p>
-        `
+        
+        // HTMLstring +=`
+        // <p>${input._id}</p>
+        // <p>${input.name}</p>
+        // <p>${input.location}</p>
+        // <p>${input.date}</p>
+        // <p>${input.time}</p>
+        // <p>${input.longitude}</p>
+        // <p>${input.latitude}</p>
+        // `
+        HTMLstring +=`got dataMarket!`
+        
     })
     document.getElementById("container").innerHTML= HTMLstring;
 }
