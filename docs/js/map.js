@@ -2,8 +2,37 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoidGlsYWRlaHVuIiwiYSI6ImNrdXdhNzczaDBlN2sydW1yYTQwMzM5MHUifQ.n9w_c_FBhfcJOR-QADQcpA';
 
 //Ask user for their permission to get their location
-navigator.geolocation.getCurrentPosition(successLocation,
-    errorLocation, {enableHighAccuracy: true})
+navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {enableHighAccuracy: true})
+
+
+window.onload = function(){
+    getDataMarket()
+    //getDataPerson()
+
+    //postDataMarket()
+    //postDataPerson()
+}
+
+//Get data from the database
+async function getDataMarket() {
+    let data = await fetch("https://web2-courseproject-attila.herokuapp.com/dataMarket")
+    let json = await data.json();
+    let HTMLstring = "";
+
+    json.forEach(input => {
+        HTMLstring +=`
+        <p>${input._id}</p>
+        <p>${input.name}</p>
+        <p>${input.location}</p>
+        <p>${input.date}</p>
+        <p>${input.time}</p>
+        `
+    })
+    document.getElementById("container").innerHTML= HTMLstring;
+
+
+  }
+
 
 //----------------------------------USER LOCATION-------------------------------------
 function successLocation(position){
