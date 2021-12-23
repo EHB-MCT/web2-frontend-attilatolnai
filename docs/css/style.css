@@ -1,8 +1,9 @@
 h1 {
-    color: orange;
-    font-size: 20px;
+    color: #FBB03B;
+    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 1%;
+    margin-left: 2%;
+    font-weight: bold;
 }
 body {
     /* background-color: #4D4D4D; */
@@ -12,13 +13,13 @@ body {
 #map {
     height: 71vh;
     width: 100vw;
-    border-bottom: solid orange 8px;
+    border-bottom: solid #FBB03B 8px;
 }
 article{
     width: 100%;
     height: auto;
     background-color: #4D4D4D;
-    border-bottom: solid orange 8px;
+    border-bottom: solid #FBB03B 8px;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -69,4 +70,18 @@ h2{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+#box{
+    border-bottom: solid #FBB03B 2px;
+    margin-left: 2%;
+}
+#box p{
+    color: #4D4D4D;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#box h3{
+    color: #4D4D4D;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }

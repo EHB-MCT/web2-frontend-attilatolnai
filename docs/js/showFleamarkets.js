@@ -13,11 +13,13 @@ async function getDataMarket() {
         // <p>${input.longitude}</p>
         // <p>${input.latitude}</p>
         HTMLstring +=`
-        <p>Name:</p>
-        <p>${input.name}</p>
+        <div id="box">
+        
+        <h3>${input.name}</h3>
         <p>Where: ${input.location}</p>
         <p>When: ${input.date}</p>
         <p>What time: ${input.time}</p>
+        </div>
         </br>
         `  
     })
