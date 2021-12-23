@@ -63,6 +63,9 @@ h2{
     font-weight: bold;
     
 }
+#seller{
+    color: #F15A24;
+}
 #visitor-a{
     color: #4D4D4D;
     padding: 2%;
@@ -84,4 +87,18 @@ h2{
     color: #4D4D4D;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2%;
+}
+form h3{
+    color: #4D4D4D;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    width: 20%;
 }
