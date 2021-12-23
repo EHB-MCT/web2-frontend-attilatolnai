@@ -2,7 +2,7 @@ window.onload = function () {
     postData()
 }
 
-function postData() {
+async function postData() {
     document.getElementById("from").addEventListener("submit", e => {
         e.preventDefault();
 
@@ -25,6 +25,11 @@ function postData() {
                     Longitude: inputLongitude,
                     Latitude: inputLatitude
                 })
+            }).then(response =>{
+                return response.json()
+            }).then(async data => {
+                console.log('Success:', data);
+                await postData();
             })
 
     }), getData()
