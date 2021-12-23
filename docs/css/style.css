@@ -5,24 +5,27 @@ h1 {
     margin-left: 1%;
 }
 body {
-    background-color: #4D4D4D;
+    /* background-color: #4D4D4D; */
+    background-color: #F2F2F2;
     margin: 0;
 }
 #map {
     height: 71vh;
     width: 100vw;
-    border-top: solid orange 10px;
-    border-bottom: solid orange 10px;
+    border-bottom: solid orange 8px;
 }
 article{
     width: 100%;
+    height: auto;
+    background-color: #4D4D4D;
+    border-bottom: solid orange 8px;
     display: flex;
     flex-direction: row;
     margin: 0;
     justify-content: flex-start;
 }
 a{
-    color: orange;
+    color: #F2F2F2;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -35,4 +38,35 @@ img{
     padding-top: 2%;
     padding-right: 2%;
     padding-bottom: 4%;
+}
+
+h2{
+    padding-top: 5%;
+    text-align: center;
+    color: #4D4D4D;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 10%;
+}
+
+#selection{
+    text-align: center;
+}
+
+#seller-a{
+    color: #F2F2F2;
+    padding: 2%;
+    background-color: #F15A24;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+#visitor-a{
+    color: #4D4D4D;
+    padding: 2%;
+    background-color: #FBB03B;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
